@@ -4,11 +4,11 @@ from django.shortcuts import render
 def startpage (request):
 	return render (request, "quiz/startpage.html")
 
-def startpage (request):
+def quiz (request):
 	return render (request, "quiz/quiz.html")
 
-def startpage (request):
+def question (request):
 	return render (request, "quiz/question.html")
 
-def startpage (request):
+def completed (request):
 	return render (request, "quiz/completed.html")
