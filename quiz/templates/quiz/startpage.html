@@ -5,22 +5,24 @@
 	<meta charset = "utf-8">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="/static/style.css">
+   
 </head>
 
 <body>
-<h1>Välkommen till Tjejerkodar Quiz<h1>
+    
+    <h1>Välkommen till Tjejerkodar Quiz<h1>
 
+	<h2> Välj någon av quizen nedan och testa dina kunskaper!</h2> 
 
-<h2> Välj någon av quizen nedan och testa dina kunskaper</h2>
+	{% for quiz_slug, quiz in quizzes.items %}
+		 <p><a href="{% url "quiz_page" quiz_slug %}">
+			{{ quiz.name }}
+		</a></p>
+		{% endfor %}
 
-{% for quiz_slug, quiz in quizzes.items %}
-	 <p><a href="{% url "quiz_page" quiz_slug %}">
-		{{ quiz.name }}
-	</a></p>
-{% endfor %}
+	<br>
 
-<br>
-		<a href="quiz.html" class="button">Start</a>
-		</div>
+	<a href="quiz.html" class="button">Start</a>
+		
 
 </body>
