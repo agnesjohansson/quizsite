@@ -16,8 +16,11 @@ quizzes = {
 }
 
 # Create your views here.
-def startpage (request):
-	return render (request, "quiz/startpage.html")
+def startpage(request):
+	context = {
+		"quizzes": quizzes,
+	}
+	return render(request, "quiz/startpage.html", context)
 
 def quiz (request):
 	return render (request, "quiz/quiz.html")
