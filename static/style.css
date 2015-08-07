@@ -2,10 +2,22 @@
 
 body {
 
-   	background-color: #D9D9D9;
+   	background-image:
+    linear-gradient(
+      to right, 
+      red, #f06d06
+    );
+    background-color: #D9D9D9;
 	max-width: 1000px;
 	margin: 0 auto;
     font-family: 'Handlee';
+}
+.gradient {
+  background-image:
+    linear-gradient(
+      to right, 
+      red, #f06d06
+    );
 }
 
 .button {
@@ -26,8 +38,8 @@ body {
 
 .buttonnext {
     display: block;
-    height: 50px;
-    width: 180px;
+    height: 100px;
+    width: 170px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: 2px solid rgba(33, 68, 72, 0.59);

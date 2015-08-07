@@ -9,20 +9,13 @@
 
 <body>
 <br>
-<h1>{{ quiz.name }}</h1>
-	<p>{{ quiz.description }}</p>
+<h1><p>{{ quiz.description|safe }}</p><h1>
 
-<p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
+<h3>Tryck på knappen för att starta Quizet!</h3>
 
-	<h1>Välkommen till Flagg-Quizet? Hur många flaggor kan du pricka rätt?</h1>
-
-	<br>
-
-		<h3>Tryck på knappen för att starta Quizet!</h3>
+<p><a href="{% url "question_page" quiz.slug 1 %}" class="button">Starta</a></p>
 
 	<br>
-		<a href="question.html" class="button">Start</a>
-		</div>
 
 
 

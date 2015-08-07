@@ -15,14 +15,12 @@
 	<h2> Välj någon av quizen nedan och testa dina kunskaper!</h2> 
 
 	{% for quiz in quizzes %}
-		 <p><a href="{% url "quiz_page" quiz.slug %}">
+		 <h2><p><a href="{% url "quiz_page" quiz.slug %}">
 			{{ quiz.name }}
-		</a></p>
+		</a></p></h2>
 		{% endfor %}
 
 	<br>
-
-	<a href="quiz.html" class="button">Start</a>
 		
 
 </body>

@@ -11,8 +11,7 @@
 
 
 <br>
-	<h1>{{ quiz.name }}</h1>
-	<h2>{{ question_number }}. {{ question }}</h2>
+	<h2>{{ question_number }}. {{ question|safe }}</h2>
 
 	<form action="{% url "question_page" quiz.slug question_number %}" method="post">
 
@@ -42,7 +41,5 @@
 	</form>
 
 	<br>
-
-	<img src="/static/storbritannien.gif" style="width:350px;height:228px;">
 
 </body>
