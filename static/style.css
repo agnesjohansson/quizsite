@@ -5,9 +5,9 @@ body {
    	background-image:
     linear-gradient(
       to right, 
-      red, #f06d06
+      gray, #282828 
     );
-    background-color: #D9D9D9;
+    background-color: #282828 ;
 	max-width: 1000px;
 	margin: 0 auto;
     font-family: 'Handlee';
@@ -16,7 +16,7 @@ body {
   background-image:
     linear-gradient(
       to right, 
-      red, #f06d06
+      gray, #ffffff
     );
 }
 
