@@ -1,96 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Tjejer kodar Quiz</title>
 	<meta charset = "utf-8">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="/static/style.css">
+
 </head>
 
-<body>
-	<h1>{{ question_number }}. {{ question }}</h1>
-	<p>{{ answer1 }}</p>
-	<p>{{ answer2 }}</p>
-	<p>{{ answer3 }}</p>
 
-<p><a href="{% url "question_page" quiz.slug question_number|add:1 %}">Nästa</a></p>
+<br>
+	<h1>{{ quiz.name }}</h1>
+	<h2>{{ question_number }}. {{ question }}</h2>
 
-		<img src="/static/storbritannien.gif" style="width:350px;height:228px;">
+	<form action="{% url "question_page" quiz.slug question_number %}" method="post">
 
-	<br>
+	<p>
+		<label>
+			<input type="radio" name="answer" value="1">
+			{{ answer1 }}
+		</label>
+	</p>
+	<p>
+		<label>
+			<input type="radio" name="answer" value="2">
+			{{ answer2 }}
+		</label>
+	</p>
+	<p>
+		<label>
+			<input type="radio" name="answer" value="3">
+			{{ answer3 }}
+		</label>
+	</p>
 
-	<form>
-		<input type="radio" name="fråga1" value="usa"> USA
-	<br>
-		<input type="radio" name="fråga1" value="storbritannien"> Storbritannien
-	<br>
-		<input type="radio" name="fråga1" value="australien"> Australien
-	<br>
-		<input type="radio" name="fråga1" value="irland"> Irland
-	</form>
+	<button type="submit" class="buttonnext">Nästa</button>
 
-	<br>
-		<a href="frågor_quiz.html" class="buttonnext">Nästa</a>
+	{% csrf_token %}
 
-	<br>
-
-		<img src="/static/kenya.png" style="width:350px;height:228px;">
-
-	<form>
-		<input type="radio" name="fråga2" value="nigeria"> Nigeria
-	<br>
-		<input type="radio" name="fråga2" value="kenya"> Kenya
-	<br>
-		<input type="radio" name="fråga2" value="indonesien"> Indonesien
-	<br>
-		<input type="radio" name="fråga2" value="argentina"> Argentina
 	</form>
 
 	<br>
 
-		<img src="/static/spanien.jpg" style="width:350px;height:228px;">
-
-	<form>
-		<input type="radio" name="fråga3" value="italien"> Italien
-	<br>
-		<input type="radio" name="fråga3" value="frankrike"> Frankrike
-	<br>
-		<input type="radio" name="fråga3" value="sverige"> Sverige
-	<br>
-		<input type="radio" name="fråga3" value="spanien"> Spanien
-	</form>
-
-	<br>
-
-		<img src="/static/finland.gif" style="width:350px;height:228px;">
-
-	<form>
-		<input type="radio" name="fråga4" value="finland"> Finland
-	<br>
-		<input type="radio" name="fråga4" value="norge"> Norge
-	<br>
-		<input type="radio" name="fråga4" value="polen"> Polen
-	<br>
-		<input type="radio" name="fråga4" value="tyskland"> Tyskland
-	</form>
-
-	<br>
-
-		<img src="/static/makedonien.jpg" style="width:350px;height:228px;">
-
-	<form>
-		<input type="radio" name="fråga5" value="chile"> Chile
-	<br>
-		<input type="radio" name="fråga5" value="portugal"> Norge
-	<br>
-		<input type="radio" name="fråga5" value="makedonien"> Makedonien
-	<br>
-		<input type="radio" name="fråga5" value="island"> Island
-	</form>
-
-	<br>
-
-		<a href="completed.html" class="button">Resultat</a>
-
+	<img src="/static/storbritannien.gif" style="width:350px;height:228px;">
 
 </body>
