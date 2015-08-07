@@ -12,7 +12,7 @@
 <h1>{{ quiz.name }}</h1>
 	<p>{{ quiz.description }}</p>
 
-<p><a href="{% url "question_page" quiz_slug 1 %}">Starta</a></p>
+<p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
 
 	<h1>Välkommen till Flagg-Quizet? Hur många flaggor kan du pricka rätt?</h1>
 
